@@ -37,6 +37,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 api(libs.androidx.lifecycle.viewmodel.ktx)
+                implementation(libs.kmm.viewmodel.core)
             }
         }
 
@@ -69,3 +70,7 @@ android {
         minSdk = 24
     }
 }
+
+//dependencies {
+//    implementation(libs.androidx.core.ktx)
+//}
