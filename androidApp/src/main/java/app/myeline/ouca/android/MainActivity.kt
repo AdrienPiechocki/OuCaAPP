@@ -19,7 +19,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    GreetingView(Greeting().greet())
+//                    GreetingView(Greeting().greet())
+                    CounterView()
                 }
             }
         }
