@@ -9,10 +9,10 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import app.myeline.ouca.Greeting
+import app.myeline.ouca.CounterViewModel
 
 class MainActivity : ComponentActivity() {
-    private val counterViewModel by viewModels<CounterViewModel>()
+    private val counterViewModel: CounterViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

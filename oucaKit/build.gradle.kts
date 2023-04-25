@@ -26,6 +26,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(libs.kotlinx.coroutines.core)
+                implementation(libs.kmm.viewmodel.core)
             }
         }
         val commonTest by getting {
@@ -33,7 +34,12 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                api(libs.androidx.lifecycle.viewmodel.ktx)
+            }
+        }
+
         val androidUnitTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting

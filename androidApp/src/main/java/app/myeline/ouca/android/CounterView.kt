@@ -18,11 +18,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.myeline.ouca.CounterViewModel
 
 @Composable
 fun CounterView(counterViewModel: CounterViewModel) {
     // var count by remember { mutableStateOf(0) }
-    val count by counterViewModel.count.collectAsState()
+    val count = 0 // by counterViewModel.count.collectAsState()
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -35,7 +36,7 @@ fun CounterView(counterViewModel: CounterViewModel) {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Button(
-            onClick = { counterViewModel.incrementCount() },
+            onClick = { /* counterViewModel.incrementCount() */ },
             modifier = Modifier.width(200.dp)
         ) {
             Text(text = "Increment")
