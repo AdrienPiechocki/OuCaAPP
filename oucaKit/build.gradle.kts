@@ -1,6 +1,8 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.google.devtools.ksp")
+    id("com.rickclephas.kmp.nativecoroutines")
 }
 
 kotlin {
@@ -11,7 +13,6 @@ kotlin {
             }
         }
     }
-    
     listOf(
         iosX64(),
         iosArm64(),
@@ -62,6 +63,11 @@ kotlin {
         }
     }
 }
+
+kotlin.sourceSets.all {
+    languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
+}
+
 
 android {
     namespace = "app.myeline.ouca"

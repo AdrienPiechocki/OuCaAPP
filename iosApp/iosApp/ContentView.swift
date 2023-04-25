@@ -2,11 +2,15 @@ import SwiftUI
 import oucaKit
 
 struct ContentView: View {
-	let greet = Greeting().greet()
-
-	var body: some View {
-		Text(greet)
-	}
+    var body: some View {
+        CounterView()
+    }
+    
+//	let greet = Greeting().greet()
+//
+//	var body: some View {
+//		Text(greet)
+//	}
 }
 
 struct ContentView_Previews: PreviewProvider {
