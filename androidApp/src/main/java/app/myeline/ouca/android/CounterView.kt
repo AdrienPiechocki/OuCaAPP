@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -19,8 +20,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun CounterView() {
-    var count by remember { mutableStateOf(0) }
+fun CounterView(counterViewModel: CounterViewModel) {
+    // var count by remember { mutableStateOf(0) }
+    val count by counterViewModel.count.collectAsState()
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -33,7 +35,7 @@ fun CounterView() {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Button(
-            onClick = { count++ },
+            onClick = { counterViewModel.incrementCount() },
             modifier = Modifier.width(200.dp)
         ) {
             Text(text = "Increment")

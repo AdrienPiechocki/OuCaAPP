@@ -3,6 +3,7 @@ package app.myeline.ouca.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -11,6 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import app.myeline.ouca.Greeting
 
 class MainActivity : ComponentActivity() {
+    private val counterViewModel by viewModels<CounterViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -20,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
 //                    GreetingView(Greeting().greet())
-                    CounterView()
+                    CounterView(counterViewModel)
                 }
             }
         }
