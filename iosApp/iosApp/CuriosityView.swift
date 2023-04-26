@@ -13,8 +13,16 @@ import oucaKit
 struct CuriosityView: View {
     @StateViewModel var viewModel = CuriosityViewModel()
 
+    var a: Curiosity  { viewModel.curiosity }
+    
     var body: some View {
         VStack(spacing: 16) {
+            switch viewModel.curiosity {
+            case is HistoricCuriosity: Text("")
+            case is ArtisticCuriosity: Text("")
+            case is ArchitecturalCuriosity: Text("")
+            default: Text("")
+            }
             Text("Curiosity: \(viewModel.curiosity.name)")
                 .font(.title)
                 .fontWeight(.bold)

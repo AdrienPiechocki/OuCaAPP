@@ -1,5 +1,8 @@
 package app.myeline.ouca
 
+enum class CuriosityCategory {
+    HISTORIC, ARCHITECTURAL, ARTISTIC
+}
 sealed interface Curiosity {
     val name: String
     val latitude: Float

@@ -34,7 +34,7 @@ fun CuriosityView(viewModel: CuriosityViewModel) {
         modifier = Modifier.padding(16.dp)
     ) {
         Text(
-            text = "Count: $curiosity",
+            text = "Curiosity: $curiosity",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
