@@ -7,13 +7,13 @@ import com.rickclephas.kmp.nativecoroutines.NativeCoroutinesState
 open class CuriosityViewModel: KMMViewModel() {
 
     val historicCuriosity = Curiosity(
-        CuriosityCategory.HISTORIC,
+        Curiosity.Category.HISTORIC,
         "Tour Eiffel",
         1.0F,
         1.1F
     )
     val artisticCuriosity = Curiosity(
-        CuriosityCategory.ARTISTIC,
+        Curiosity.Category.ARTISTIC,
         "Joconde",
         2.0F,
         2.1F

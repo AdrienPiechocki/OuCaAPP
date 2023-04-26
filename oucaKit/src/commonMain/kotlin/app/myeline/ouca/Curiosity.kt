@@ -1,15 +1,16 @@
 package app.myeline.ouca
 
-enum class CuriosityCategory {
-    HISTORIC, ARCHITECTURAL, ARTISTIC
-}
 
 data class Curiosity (
-    val category: CuriosityCategory,
+    val category: Category,
     val name: String,
     val latitude: Float,
     val longitude: Float
-)
+) {
+    enum class Category {
+        HISTORIC, ARCHITECTURAL, ARTISTIC
+    }
+}
 
 //sealed interface Curiosity {
 //    val name: String
