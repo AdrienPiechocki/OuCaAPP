@@ -4,8 +4,8 @@ package app.myeline.ouca
 data class Curiosity (
     val category: Category,
     val name: String,
-    val latitude: Float,
-    val longitude: Float
+    val latitude: Double,
+    val longitude: Double
 ) {
     enum class Category {
         HISTORIC, ARCHITECTURAL, ARTISTIC

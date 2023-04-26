@@ -6,23 +6,23 @@ import com.rickclephas.kmp.nativecoroutines.NativeCoroutinesState
 
 open class CuriosityViewModel: KMMViewModel() {
 
-    val historicCuriosity = Curiosity(
+    val paris = Curiosity(
         Curiosity.Category.HISTORIC,
         "Tour Eiffel",
-        1.0F,
-        1.1F
+        48.8584,
+        2.2945
     )
-    val artisticCuriosity = Curiosity(
-        Curiosity.Category.ARTISTIC,
-        "Joconde",
-        2.0F,
-        2.1F
+    val singapore = Curiosity(
+        Curiosity.Category.ARCHITECTURAL,
+        "Singapore",
+        1.35,
+        103.87
     )
     @NativeCoroutinesState
-    val curiosity = MutableStateFlow<Curiosity>(viewModelScope,historicCuriosity)
+    val curiosity = MutableStateFlow<Curiosity>(viewModelScope,paris)
 
     fun getCuriosity() {
-        curiosity.value = artisticCuriosity
+        curiosity.value = singapore
     }
 
 }
