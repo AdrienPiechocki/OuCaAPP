@@ -10,3 +10,15 @@ data class HistoricCuriosity(
     override val latitude: Float,
     override val longitude: Float
 ): Curiosity
+
+data class ArchitecturalCuriosity(
+    override val name: String,
+    override val latitude: Float,
+    override val longitude: Float
+): Curiosity
+
+data class ArtisticCuriosity(
+    override val name: String,
+    override val latitude: Float,
+    override val longitude: Float
+): Curiosity

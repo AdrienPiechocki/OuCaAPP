@@ -3,7 +3,7 @@ import oucaKit
 
 struct ContentView: View {
     var body: some View {
-        CounterView()
+        CuriosityView()
     }
     
 //	let greet = Greeting().greet()

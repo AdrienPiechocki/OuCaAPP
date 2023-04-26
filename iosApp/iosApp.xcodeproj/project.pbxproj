@@ -15,6 +15,7 @@
 		8F77759A29F8826300EA8195 /* KMMViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8F77759929F8826300EA8195 /* KMMViewModelSwiftUI */; };
 		8F77759C29F882C600EA8195 /* KMMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77759B29F882C600EA8195 /* KMMViewModel.swift */; };
 		8F77759E29F8833A00EA8195 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77759D29F8833A00EA8195 /* CounterView.swift */; };
+		8F7775A029F9380D00EA8195 /* CuriosityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77759F29F9380D00EA8195 /* CuriosityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F77759B29F882C600EA8195 /* KMMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMMViewModel.swift; sourceTree = "<group>"; };
 		8F77759D29F8833A00EA8195 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		8F77759F29F9380D00EA8195 /* CuriosityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriosityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				8F77759D29F8833A00EA8195 /* CounterView.swift */,
+				8F77759F29F9380D00EA8195 /* CuriosityView.swift */,
 				8F77759B29F882C600EA8195 /* KMMViewModel.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F77759C29F882C600EA8195 /* KMMViewModel.swift in Sources */,
+				8F7775A029F9380D00EA8195 /* CuriosityView.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				8F77759E29F8833A00EA8195 /* CounterView.swift in Sources */,
