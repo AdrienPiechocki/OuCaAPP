@@ -6,6 +6,8 @@ plugins {
     kotlin("multiplatform").version("1.8.10").apply(false)
     id("com.google.devtools.ksp").version("1.8.10-1.0.9").apply(false)
     id("com.rickclephas.kmp.nativecoroutines").version("1.0.0-ALPHA-5").apply(false)
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin").version("2.0.1").apply(false)
+
 }
 
 tasks.register("clean", Delete::class) {

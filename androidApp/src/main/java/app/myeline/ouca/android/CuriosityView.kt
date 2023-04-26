@@ -21,6 +21,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.myeline.ouca.CounterViewModel
 import app.myeline.ouca.CuriosityViewModel
+import com.google.android.gms.maps.model.CameraPosition
+import com.google.android.gms.maps.model.LatLng
+import com.google.maps.android.compose.*
 import kotlinx.coroutines.flow.MutableStateFlow
 
 
@@ -33,11 +36,25 @@ fun CuriosityView(viewModel: CuriosityViewModel) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.padding(16.dp)
     ) {
+        val singapore = LatLng(1.35, 103.87)
+        val cameraPositionState = rememberCameraPositionState {
+            position = CameraPosition.fromLatLngZoom(singapore, 10f)
+        }
         Text(
             text = "Curiosity: $curiosity",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
+        GoogleMap(
+            modifier = Modifier.fillMaxSize(),
+            cameraPositionState = cameraPositionState
+        ) {
+            Marker(
+                state = MarkerState(position = singapore),
+                title = "Singapore",
+                snippet = "Marker in Singapore"
+            )
+        }
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = { viewModel.getCuriosity() },
