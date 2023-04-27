@@ -7,6 +7,7 @@ foundation = "1.4.2"
 kmm-viewmodel-core = "1.0.0-ALPHA-4"
 kotlin-coroutines = "1.6.4"
 kotlin-math = "1.5.2"
+maps-compose = "2.11.0"
 org-jetbrains-kotlin-android = "1.8.0"
 core-ktx = "1.10.0"
 junit = "4.13.2"
@@ -14,6 +15,7 @@ androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 appcompat = "1.6.1"
 material = "1.8.0"
+play-services-maps = "18.1.0"
 ui = "1.4.2"
 androidx-lifecycle = '2.6.1'
 
@@ -33,8 +35,10 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 kmm-viewmodel-core = { module = "com.rickclephas.kmm:kmm-viewmodel-core", version.ref = "kmm-viewmodel-core" }
 kotlin-math = { module = "dev.romainguy:kotlin-math", version.ref = "kotlin-math" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "maps-compose" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-lifecycle-viewmodel-ktx = { module = 'androidx.lifecycle:lifecycle-viewmodel-ktx', version.ref = 'androidx-lifecycle' }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "play-services-maps" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "com-android-application" }

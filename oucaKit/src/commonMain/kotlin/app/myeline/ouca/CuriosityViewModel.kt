@@ -19,7 +19,7 @@ open class CuriosityViewModel: KMMViewModel() {
         103.87
     )
     @NativeCoroutinesState
-    val curiosity = MutableStateFlow<Curiosity>(viewModelScope,paris)
+    val curiosity = MutableStateFlow<Curiosity>(viewModelScope, paris)
 
     fun getCuriosity() {
         curiosity.value = singapore
