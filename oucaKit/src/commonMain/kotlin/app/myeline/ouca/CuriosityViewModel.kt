@@ -25,24 +25,35 @@ open class CuriosityViewModel: KMMViewModel() {
         0.0
     )
 
-    val curiosities = listOf(paris, singapore)
+    val curiosities = listOf(paris, singapore, océan)
 
     @NativeCoroutinesState
     val curiosity = MutableStateFlow<Curiosity>(viewModelScope, paris)
 
-    fun setCuriosity() {
+    fun nextCuriosity() {
         var current = getCuriosity()
         val currentIndex = curiosities.indexOf(current)
-        println("previous location: "+current.name)
         if(curiosities[currentIndex] == curiosities[curiosities.size-1]){
             current = curiosities[0]
             curiosity.value = current
-            return
         } else {
             current = curiosities[currentIndex + 1]
             curiosity.value = current
-            return
         }
+    }fun previousCuriosity() {
+        var current = getCuriosity()
+        val currentIndex = curiosities.indexOf(current)
+        if(curiosities[currentIndex] == curiosities[0]){
+            current = curiosities[curiosities.size-1]
+            curiosity.value = current
+        } else {
+            current = curiosities[currentIndex - 1]
+            curiosity.value = current
+        }
+    }
+
+    fun setCuriosity(curios: Curiosity) {
+        curiosity.value = curios
     }
 
     fun getCuriosity(): Curiosity {
