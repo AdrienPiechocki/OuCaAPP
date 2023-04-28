@@ -16,7 +16,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.ViewModel
 import app.myeline.ouca.CuriosityViewModel
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.model.CameraPosition
@@ -25,8 +24,7 @@ import com.google.maps.android.compose.*
 
 
 @Composable
-fun CuriosityView(viewModel: CuriosityViewModel) {
-    // var count by remember { mutableStateOf(0) }
+fun CuriosityDetail(viewModel: CuriosityViewModel) {
     val curiosity by viewModel.curiosity.collectAsState()
     val name = curiosity.name
     val category = curiosity.category
@@ -37,43 +35,6 @@ fun CuriosityView(viewModel: CuriosityViewModel) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.padding(16.dp)
     ) {
-        val curiosityLatLng = LatLng(latitude, longitude)
-        val cameraPositionState = CameraPositionState (
-            position = CameraPosition.fromLatLngZoom(curiosityLatLng, 10f)
-        )
-        GoogleMap(
-            modifier = Modifier.height(400.dp),
-            cameraPositionState = cameraPositionState
-        ) {
-            Marker(
-                state = MarkerState(position = curiosityLatLng),
-                title = curiosity.name,
-                snippet = "Snippet"
-            )
-        }
-        Spacer(modifier = Modifier.height(16.dp))
-        Row() {
-            Button(
-                onClick = { viewModel.previousCuriosity() },
-                modifier = Modifier.width(100.dp)
-            ) {
-                Text(text = "Previous")
-            }
-            Spacer(modifier = Modifier.width(8.dp))
-            Button(
-                onClick = { viewModel.nextCuriosity() },
-                modifier = Modifier.width(100.dp)
-            ) {
-                Text(text = "Next")
-            }
-        }
-        Button(
-            onClick = { cameraPositionState.position = CameraPosition.fromLatLngZoom(curiosityLatLng, 10f) },
-            modifier = Modifier.width(100.dp)
-        ) {
-            Text(text = "Center")
-        }
-        Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = "Curiosity: $name \n" +
                     "Category: $category \n" +
@@ -81,14 +42,12 @@ fun CuriosityView(viewModel: CuriosityViewModel) {
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
-
-        /*
         Button(
-            onClick = { CuriosityDetail(viewModel = viewModel) },
+            onClick = {  },
             modifier = Modifier.width(100.dp)
         ) {
-            Text(text = "Info")
+            Text(text = "Back")
         }
-        */
+
     }
 }
