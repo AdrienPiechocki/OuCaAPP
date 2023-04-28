@@ -41,7 +41,9 @@ fun CuriosityView(viewModel: CuriosityViewModel) {
         )
 
         Text(
-            text = "Curiosity: $name is $category at $curiosityLatLng",
+            text = "Curiosity: $name \n" +
+                    "Category: $category \n" +
+                    "Coordinates: $latitude, $longitude",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
