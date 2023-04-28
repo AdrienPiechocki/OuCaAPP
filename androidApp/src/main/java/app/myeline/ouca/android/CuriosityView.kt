@@ -49,7 +49,7 @@ fun CuriosityView(viewModel: CuriosityViewModel) {
         }
         Spacer(modifier = Modifier.height(16.dp))
         Button(
-            onClick = { viewModel.getCuriosity() },
+            onClick = { viewModel.setCuriosity() },
             modifier = Modifier.width(200.dp)
         ) {
             Text(text = "Get curiosity")
